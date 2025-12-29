@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Operaciones básicas</title>
+  <meta name="description" content="Operaciones matemáticas con JavaScript">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container mt-4">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-light bg-light mb-4">
+      <img src="images/Logo_Cenestur.png" alt="Logo" width="120" height="120" class="img-fluid">
+
+      <!-- Texto a la derecha antes del botón -->
+      <span class="navbar-brand ms-4 me-3 fs-3">
+        Operaciones basicas
+      </span>
+
+      <button class="navbar-toggler" type="button">
+        ☰
+      </button>
+    </nav>
+
+    <!-- TÍTULO -->
+    <h2 class="text-center mb-4">
+      Formulario Matemático
+    </h2>
+
+    <!-- FORMULARIO -->
+    <div class="mb-3">
+      <label class="form-label">Número 1</label>
+      <input type="number" id="num1" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Número 2</label>
+      <input type="number" id="num2" class="form-control">
+    </div>
+
+    <!-- BOTONES -->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+      <button class="btn btn-primary" onclick="sumar()">Sumar</button>
+      <button class="btn btn-success" onclick="restar()">Restar</button>
+      <button class="btn btn-warning" onclick="multiplicar()">Multiplicar</button>
+      <button class="btn btn-danger" onclick="dividir()">Dividir</button>
+    </div>
+
+    <!-- RESULTADO -->
+    <p id="resultado" class="alert alert-info mt-4 text-center">
+      Resultado: --
+    </p>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function sumar() {
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+      document.getElementById("resultado").innerText = "Resultado: " + (a + b);
+    }
+
+    function restar() {
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+      document.getElementById("resultado").innerText = "Resultado: " + (a - b);
+    }
+
+    function multiplicar() {
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+      document.getElementById("resultado").innerText = "Resultado: " + (a * b);
+    }
+
+    function dividir() {
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+
+      if (b === 0) {
+        document.getElementById("resultado").innerText =
+          "No se puede dividir para cero";
+      } else {
+        document.getElementById("resultado").innerText =
+          "Resultado: " + (a / b);
+      }
+    }
+  </script>
+
+</body>
+</html>
