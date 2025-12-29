@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="Operaciones matematicas con Javascript<">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body>
+      <div class="container">
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
+     <img src="images/Logo_Cenestur.png" width="110" height="100" class="img-fluid">
+    <a class="navbar-brand" href="#"> Operaciones </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Bienvenidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Oferta academica</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mi campus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">contactanos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        <h1> Formulario de operaciones Matematicas </h1>
+    </header>
+
+    <main>
+         <form>
+
+            <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Numero 1</label>
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  id="num1" 
+                  aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                 <label for="exampleInputPassword1" class="form-label"
+                 >Numero 2</label
+                 >
+                 <input 
+                 type="text" 
+                 class="form-control" 
+                 id="num2"
+                 />
+              </div>          
+            <button id="Calcular" type="submit" class="btn btn-primary">Calcular</button>
+          </form>
+        </main>
+      </div>
+    </body>
+
+    <script>
+       let num1 = document.getElementById("num1") 
+       let num2 = document.getElementById("num2").value 
+       let calcular = document.getElementById("calcular")
+       calcular.addEventListener("click", suma)
+
+       function suma(){
+        alert("desde el boton")
+       }s
+  </script>
+
+  </html>
